@@ -11,6 +11,7 @@ import router from '@adonisjs/core/services/router'
 const PostsController = () => import('#controllers/posts_controller')
 const UsersController = () => import('#controllers/users_controller')
 const DashboardController = () => import('#controllers/dashboard_controller')
+const MediaController = () => import('#controllers/media_controller')
 
 router.get('/', async () => {
   return {
@@ -28,3 +29,8 @@ router.group(() => {
   router.get('/ditolak', [DashboardController, 'ditolak'])
   router.get('/diterima', [DashboardController, 'diterima'])
 }).prefix('/dashboard')
+
+
+router.group(() => {
+router.post('/store', [MediaController,'store'])
+}).prefix('/media')
