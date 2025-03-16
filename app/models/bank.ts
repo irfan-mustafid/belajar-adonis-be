@@ -13,7 +13,7 @@ export default class Bank extends BaseModel {
 
   @column()
   declare name: string
-  @column() 
+  @column()
   declare address: string
   @column()
   declare province_id: number
@@ -37,15 +37,14 @@ export default class Bank extends BaseModel {
   declare tnc: string
   @column()
   declare file_id_spkmgr: number
-  @column() 
+  @column()
   declare spkmgr: string
   @column()
   declare is_active: string
-  @column() 
+  @column()
   declare catatan: string
   @column()
   declare keterangan: string
   @column()
   declare biaya_admin: number
 }
-    

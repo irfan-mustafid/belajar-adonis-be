@@ -28,6 +28,9 @@ export default [
       ],
       'eqeqeq': ['error', 'always'], // Wajib pakai strict equality (===)
       'max-lines': ['error', 300], // Maksimal 300 baris per file
+      'quotes': ['error', 'single'], // Gunakan double quotes
+      '@adonisjs/prefer-lazy-controller-import': 'error', // Wajib lazy import controller
+      '@adonisjs/prefer-lazy-listener-import': 'error', // Wajib lazy import listener
     },
   },
 ]

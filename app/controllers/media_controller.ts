@@ -1,15 +1,9 @@
 import { HttpContext } from '@adonisjs/core/http'
 import Media from '#models/media'
-// import { debug } from 'console'/
-import Logger from sdfs
-// import { dd } from '@adonisjs/core/services/dumper'
 
 export default class MediaController {
   public async store({ request, response }: HttpContext) {
     const { user_id, file_path, title } = request.only(['user_id', 'file_path', 'title'])
-    // debug('user_id', user_id)
-    Logger.info('Aplikasi sudah berjalan')
-// dd(request)
     try {
       const media = await Media.create({ user_id, file_path, title })
       // dd(media)

@@ -23,14 +23,17 @@ router.get('/users', [UsersController, 'index'])
 router.get('/users/:id', [UsersController, 'show'])
 router.get('/posts/:id', [PostsController, 'show'])
 
-router.group(() => {
-  router.get('/summary', [DashboardController, 'summary'])
-  router.get('/proses', [DashboardController, 'proses'])
-  router.get('/ditolak', [DashboardController, 'ditolak'])
-  router.get('/diterima', [DashboardController, 'diterima'])
-}).prefix('/dashboard')
+router
+  .group(() => {
+    router.get('/summary', [DashboardController, 'summary'])
+    router.get('/proses', [DashboardController, 'proses'])
+    router.get('/ditolak', [DashboardController, 'ditolak'])
+    router.get('/diterima', [DashboardController, 'diterima'])
+  })
+  .prefix('/dashboard')
 
-
-router.group(() => {
-router.post('/store', [MediaController,'store'])
-}).prefix('/media')
+router
+  .group(() => {
+    router.post('/store', [MediaController, 'store'])
+  })
+  .prefix('/media')

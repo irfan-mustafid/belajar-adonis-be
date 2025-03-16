@@ -27,4 +27,4 @@ export default class Vendor extends BaseModel {
   declare alamat: string
   @column()
   declare npwp: string
-} 
+}

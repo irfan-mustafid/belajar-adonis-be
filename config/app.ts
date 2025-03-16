@@ -36,5 +36,5 @@ export const http = defineConfig({
     httpOnly: true,
     secure: app.inProduction,
     sameSite: 'lax',
-  }
+  },
 })
